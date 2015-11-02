@@ -17,6 +17,12 @@ namespace GarbageCollectionDemo
             {
                 Console.WriteLine("{0} / {1} = {2}", 120, 15, calculator.Divide(120, 15));
             }
+
+            using (Calculator calculator = new Calculator())
+            {
+                //Exception
+                Console.WriteLine("{0} / {1} = {2}", 120, 0, calculator.Divide(120, 0));
+            }
             Console.WriteLine("Program finishing");
         }
     }
